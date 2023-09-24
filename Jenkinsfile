@@ -16,7 +16,10 @@ node('workstation'){
     stage("code security"){
         print("Hello security")
     }
-    stage("Release"){
-        print("Hello Release")
+    if (env.TAG_NAME == null)
+        {
+        stage("Release"){
+            print("Hello Release")
+        }
     }
 }
