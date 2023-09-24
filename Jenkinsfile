@@ -14,7 +14,7 @@ node('workstation'){
         print "Heloo Quality"
         print env.BRANCH_NAME
     }
-    if (env.BRANCH_NAME == 'main')
+    if (env.BRANCH_NAME == 'b1')
         {
             stage("code security"){
             print "Hello security"
