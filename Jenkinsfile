@@ -19,7 +19,7 @@ node('workstation'){
     if (env.TAG_NAME !=~ '.*' )
         {
         stage("Release"){
-            print("Hello Release")
+            print(" Release")
         }
     }
 }
