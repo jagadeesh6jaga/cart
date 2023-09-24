@@ -16,7 +16,7 @@ node('workstation'){
     stage("code security"){
         print("Hello security")
     }
-    if (env.TAG_NAME == null)
+    if (env.TAG_NAME !=~ '.*' )
         {
         stage("Release"){
             print("Hello Release")
