@@ -14,12 +14,12 @@ node('workstation'){
         print "Heloo Quality"
     }
     stage("code security"){
-        print("Hello security")
+        print "Hello security"
     }
     if (env.TAG_NAME !=~ '.*' )
         {
         stage("Release"){
-            print(" Release")
+            print " Release"
         }
     }
 }
