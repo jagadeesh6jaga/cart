@@ -1,4 +1,8 @@
 node('workstation'){
+    sh 'env'
+    print '******************'
+    sh 'find .'
+    print '*****************'
     stage("Compile Code"){
         print "Hello Compile "
     }
