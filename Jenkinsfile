@@ -1,4 +1,5 @@
 node('workstation'){
+    print '************'
     sh 'env'
     print '******************'
     sh 'find .'
