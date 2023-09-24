@@ -13,9 +13,13 @@ node('workstation'){
     stage("Code Quality"){
         print "Heloo Quality"
     }
-    stage("code security"){
-        print "Hello security"
-    }
+    if (env.BRANCH_NAME == 'main')
+        {
+            stage("code security"){
+            print "Hello security"
+            }
+        }
+    
     if (env.TAG_NAME !=~ '.*' )
         {
         stage("Release"){
