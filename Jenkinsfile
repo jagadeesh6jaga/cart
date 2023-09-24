@@ -12,6 +12,7 @@ node('workstation'){
     }
     stage("Code Quality"){
         print "Heloo Quality"
+        print env.BRANCH_NAME
     }
     if (env.BRANCH_NAME == 'main')
         {
