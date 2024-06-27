@@ -1,30 +1,32 @@
-node('workstation'){
-    print '************'
-    sh 'env'
-    print '******************'
-    sh 'find .'
-    print '*****************'
-    stage("Compile Code"){
-        print "Hello Compile "
-    }
-    stage("Test"){
-        print "Hello test"
-    }
-    stage("Code Quality"){
-        print "Heloo Quality"
-        print env.BRANCH_NAME
-    }
-    if (env.BRANCH_NAME == 'b1')
-        {
-            stage("code security"){
-            print "Hello security"
+pipeline{
+    agent any
+
+    stages{
+        stage("Compile"){
+            steps{
+                echo Hello World
             }
         }
-    
-    if (env.TAG_NAME !=~ '.*' )
-        {
-        stage("Release"){
-            print " Release"
+        stage("Test"){
+            steps{
+                echo Hello World
+            }
         }
+        stage("Code Quality"){
+            steps{
+                echo Hello World
+            }
+        }
+        stage("Code Security"){
+            steps{
+                echo Hello World
+            }
+        }
+        stage("App Deploy"){
+            steps{
+                echo Hello World
+            }
+        }
+
     }
 }
